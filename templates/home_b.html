@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Home </title>              
+    </head>
+    <body>
+        <div align="center">
+            <table>
+				<h1><b>Home</b></h1>
+				<h3>API Key:{{apicheck}}</h3>
+				<li><a href="{{ url_for('api_setup') }}">Setup API key</a>
+				<h3>Opening Passage:{{introcheck}}</h3>
+				<li><a href="{{ url_for('intro_write') }}">Write new Intro</a>
+				<li><a href="{{ url_for('intro_read') }}">Read Intro</a>
+				<h3>Analysis Steps:{{analysischeck}}</h3>
+				<li><a href="{{ url_for('analysis_steps') }}">Write new Analysis Steps</a>
+				<li><a href="{{ url_for('steps_read') }}">Read Analysis Steps</a>
+				<h3>Step 1. Data Understanding and Preparation Code: {{step_1check}}</h3>
+				<li><a href="{{ url_for('step_1_write') }}">Write new Step 1 code</a>
+				<li><a href="{{ url_for('steps_1_read') }}">Read Analysis Step 1 code</a>					
+				<h3>Step 2. Exploratory Data Analysis Code: {{step_2check}}</h3>
+				<li><a href="{{ url_for('step_2_write') }}">Write new Analysis Step 2 code</a>
+				<li><a href="{{ url_for('steps_2_read') }}">Read Analysis Step 2 code</a>	
+				<h3>Step 3. Model Building and Evaluation Code: {{step_3check}}</h3>
+				<li><a href="{{ url_for('step_3_write') }}">Write new Analysis Step 3 code</a>
+				<li><a href="{{ url_for('steps_3_read') }}">Read Analysis Step 3 code</a>	
+				<h3>Step 4. Results and Interpretation Code: {{step_4check}}</h3>
+				<li><a href="{{ url_for('step_4_write') }}">Write new Analysis Step 4 code</a>
+				<li><a href="{{ url_for('steps_4_read') }}">Read Analysis Step 4 code</a>
+				<h3>Combined Step: {{step_finalcheck}}</h3>
+				<li><a href="{{ url_for('step_final_write') }}">Write new Combined code</a>
+				<li><a href="{{ url_for('steps_final_read') }}">Read Combined code</a>	
+
+				<h2>Data is not loaded. Load the .csv data in the same folder as the .py file and name it 'data.csv', then run the API again.</h2>
+            </table>
+        </div>
+    </body>
+</html>
